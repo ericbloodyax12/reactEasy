@@ -15,3 +15,40 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+
+
+
+
+
+let users = [{
+    name: "eric",
+    age: "23",
+    address: {
+        city: "Erevan",
+        country: "Armenia"
+    }
+}, {
+    name: "as",
+    age: "31",
+    address: {
+        city: "Erevan",
+        country: "Armenia"
+    }
+},
+    {
+        name: "unknown",
+        age: "23",
+        address: {
+            city: "Erevan",
+            country: "Armenia"
+        },
+    }
+];
+
+console.log(users[1].name);
+
+let b; // any
+let c: Array<number | string>;
