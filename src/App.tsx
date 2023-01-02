@@ -1,63 +1,28 @@
 import React from 'react';
 import './App.css';
+import {Rating, Rating as R} from "./components/Rating/Rating";
+import Acc from "./components/Accordion/Accordion";
 
 function App() {
   return (
     <div>
-      <h3> Menu </h3>
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-        <Rating />
+        <PageTitle title={"This is App component"} />
+        <PageTitle title={"My friens"} />
+        <input/>
+        <input type={"date"}/>
+        <input  type={"password"}/>
+        Article 1
+        <R value={3} />
+        <Acc />
+        Article 2
+        <Rating value={4}/>
     </div>
   );
 }
-
-function Rating () {
-  return(
-  <div>
-      <> This is title </>
-       <Star />
-      <Star />
-      <Star />
-      <Accordion />
-
-  </div>
-  )}
-
-function Star() {
-    console.log("Star rendered")
-    return (
-        <div>
-            This is star component in Rating
-        </div>
-    )
+function PageTitle(props:any) {
+    return <h1>{props.title}</h1>
+    
 }
 
-function Accordion () {
-    return (
-        <>
-        <AccordionTitle />
-      <AccordionBody />
-        </>
-    )}
 
 export default App;
-
-function AccordionTitle() {
-    return (
-    <h3> Menu </h3>
-    )
-};
-
-function AccordionBody() {
-    return (
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
-    )
-}
