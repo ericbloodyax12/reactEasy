@@ -1,7 +1,11 @@
 import Accordion from "../Accordion/Accordion";
 import React from "react";
 
-export function Rating(props:any) {
+type RatingPropsType = {
+    value: number
+}
+
+export function Rating(props: RatingPropsType) {
     if (props.value === 3) {
     return (
         <div>
@@ -32,8 +36,11 @@ export function Rating(props:any) {
     )
 }
 
+type StarPropsType = {
+    selected : boolean
+}
 
-    function Star(props: any) {
+    function Star(props: StarPropsType) {
     if (props.selected === true) {
         return <span>
             <b>This is star component in Rating</b> </span>
