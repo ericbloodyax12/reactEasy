@@ -10,7 +10,7 @@ type AccordionTitlePropsType = {
 type AccordionBodyPropsType = AccordionTitlePropsType
 
 
-function Accordion(props: AccordionPropsType) {
+export function Accordion(props: AccordionPropsType) {
     const [visible, setVisible] = useState(false)
 
     return (
@@ -18,9 +18,7 @@ function Accordion(props: AccordionPropsType) {
 
             <AccordionTitle title={props.titleValue as "menu" | "users"} />
             <button onClick={event => setVisible(!visible)}>Open</button>
-            {visible ?
-                <AccordionBody title={props.titleValue as "menu" | "users" }/>
-               :
+            {visible ? <AccordionBody title={props.titleValue as "menu" | "users" }/> :
                <></>
             }
         </>
@@ -42,7 +40,7 @@ function AccordionBody(props: AccordionBodyPropsType) {
                 <li>1 lemon</li>
                 <li>2 apple</li>
                 <li>3 tomato</li>
-            </ul> :
+            </ul>
             <ul>
                 <li>1 cat</li>
                 <li>2 dogs</li>

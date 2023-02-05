@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Rating, Rating as R} from "./components/Rating/Rating";
-import Acc from "./components/Accordion/Accordion";
+import {Accordion} from "./components/Accordion/Accordion";
 
 function App() {
     return (
@@ -13,8 +13,8 @@ function App() {
             <input type={"password"}/>
             Article 1
             <R value={3}/>
-            <Acc titleValue={"menu"} />
-            <Acc titleValue={"users"}/>
+            <Accordion titleValue={"menu"} />
+            <Accordion titleValue={"users"}/>
             Article 2
             <Rating value={1}/>
             <Rating value={2}/>
