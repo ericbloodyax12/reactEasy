@@ -16,8 +16,6 @@ function App() {
             <Accordion titleValue={"menu"} />
             <Accordion titleValue={"users"}/>
             Article 2
-            <Rating value={1}/>
-            <Rating value={2}/>
             <Rating value={3}/>
             <Rating value={4}/>
         </div>
